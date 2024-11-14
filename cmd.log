@@ -1,0 +1,7 @@
+awk -F, ' > 400' server_log.csv > User_ID_gt_400.txt
+awk -F, 'BEGIN {IGNORECASE=1} /backup failed/ {print}' server_log.csv > error_backup_failed.txt
+ awk '{ sum +=  } END { if (NR > 0) print sum / NR }' house_sales.csv
+ sed 's/NULL/N\/A/g' server_log.csv > cleaned_server_log.csv
+wc -l server_log_remove_null.csv
+ sed '/NULL/d' server_log.csv > server_log_remove_null.csv
+ sed 's/\t/,/g' house_sales.csv > house_comma_separated.csv
